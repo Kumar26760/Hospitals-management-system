@@ -3,7 +3,7 @@ services:
     name: hospital-management-backend
     runtime: java
     rootDir: backend
-    buildCommand: mvn clean package -DskipTests
+    buildCommand: chmod +x mvnw && ./mvnw clean package -DskipTests
     startCommand: java -jar target/hospital-management-0.0.1-SNAPSHOT.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
